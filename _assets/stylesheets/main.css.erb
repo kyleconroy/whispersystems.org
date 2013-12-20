@@ -11,14 +11,12 @@ body {
 #container {
   background-color: #fff; 
   margin: 0 auto;
-  min-width: 1140px;
-  /* max-width: 1500px; */
+  width: 100%;
 }
 
 .container { 
- /* min-width: 1140px; 
-  max-width: 1500px; */
-  width: 1140px;
+  max-width: 1140px; 
+  width: 100%;
   margin: 0 auto !important;
   padding: 0 !important;
 }
@@ -81,7 +79,8 @@ body {
 .bar {
   height: 79px;
   position: relative;
-  width: 1140px;
+  max-width: 1140px;
+  width: 100%;
   margin: 0 auto;
 }
 .bar ul {
@@ -135,8 +134,11 @@ body {
 
 .main-head {
   background-color: #171717;
-  min-width: 1140px;
+  width: 100%;
 }
+
+@media (min-width: 780px) {
+
 .header-graphics {
   overflow: visible;
   width: 420px;
@@ -146,9 +148,15 @@ body {
   margin-left: 40px;
   vertical-align: top;
 }
-.header-graphics a { text-decoration: none; }
+
+.header-graphics a {
+  text-decoration: none;
+}
+
 .header-graphics img {
   vertical-align: top;
+}
+
 }
 
 #telephone {
@@ -166,7 +174,8 @@ body {
   margin-top: 0;  /* if this is not here, messes up bar size above. */
   padding-top: 160px;
   text-align: right;
-  width: 1140px;
+  max-width: 1140px;
+  width: 100%;
   margin: 0 auto;
 }
 #telephone .tagline1 {
@@ -226,7 +235,8 @@ body {
   background-image: url(<%= asset_path "body/black_down_arrow.png" %>);
   background-repeat: no-repeat;
   background-position: 150px 0;
-  width: 1000px;
+  width: 100%;
+  max-width: 780px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
@@ -287,11 +297,9 @@ body {
 }
 
 #blog article {
-  margin-left: 140px;
   font: 100%/1.5em 'Nobile';
   font-weight: normal;
-  padding-right: 100px;
-/*  margin-left: 200px;*/
+  padding: 0 10px;
 }
 
 #blog p a {
@@ -313,9 +321,13 @@ body {
   color: #333;
 }
 
-#blog article img.nice {
+#blog article img {
   max-width: 100%;
-  padding: 6px; 
+}
+
+#blog article img.nice {
+  max-width: 95%;
+  padding: 6px;
   box-shadow: 0px 0px 5px #888; 
   display: block;
   margin-left: auto;
@@ -375,8 +387,14 @@ ul.social-buttons li{
 #main article { 
   clear: both;
   padding: 60px 0 40px 0;
-  min-width: 1140px;
 }
+
+#main article .container { 
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
 #main article h2 {
   color: #333;
   font-size: 36px;
